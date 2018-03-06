@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myRange">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>滑块滚动条</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/range.css">
+</head>
+<body ng-controller="comRangeSlider">
+	<div ng-controller="rangeController" class="rangeBox">
+		<!-- 类型 -->
+		<div class="create-disk-type margin-top-20 js-create-disk-type">
+			<p>类型</p>
+			<ul class="clearfix margin-top-20" id="js-dist-type">
+				<li ng-repeat="list in typeData" ng-class="{type_active:$index==0}" ng-click="typeClick($index)" ng-bind ="list.type" ng-model="type"></li>
+			</ul>
+		</div>
+		<!-- 容量 -->
+		<div class="from_group margin-top-20 js-create-disk-unfold clearfix">
+			<label>容量</label>
+			<div class="common_range js-rangeslider">
+				<div class="range_box left">	
+					<div class="range_bg"></div>
+				    <div id="js-change-value" class="range_position"></div>
+		            <div class="scale margin_b8">
+		            	<span class="scale_min js-scale-min"></span>
+		            	<span class="scale_max js-scale-max"></span>
+		            </div>
+	            </div>
+	            <div class="computed_box margin-top-10 left">
+		            <button class="btn_range minus"></button>
+		            <input type="text" value="" class="number js-number">
+		            <button class="btn_range plus on"></button>
+		            <span class="unit">（GB）</span>
+	            </div>
+			</div>
+	</div>
+</body>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-ui-router.min.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/rangeslider.min.js"></script>
+<script src="js/comRangeSlider.js"></script>
+<script src="js/range.js"></script>
+</html>

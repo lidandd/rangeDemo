@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS 公共样式 */
+body{ font-size:14px;font-family:'Microsoft YaHei','Hiragino Sans GB',helvetica,arial; color:#666;  background:#fff;}
+body,tr,td,thead,tbody,ul,li,div,span,img,h1,h2,h3,h4,h5,h6,em,input,select,a,p,cite,header,aside,footer,section,article,figure,nav,menu,dl,dt,dd{ margin:0; padding:0; }
+ul,li{ list-style:none; }
+html,body{width:100%; min-height: 100%;}
+a,a:hover{ text-decoration:none; }
+a{ color:#666;}
+h1,h2,h3,h4,h5,h6,em,cite{ font-style:normal;}
+a img,a:hover img{ vertical-align:top; display:block; border:none;}
+a,input,li{-webkit-tap-highlight-color:rgba(255,0,0,0);}
+header,aside,footer,section,article,figure,nav,menu{ display:block; }
+input,select,textarea{ outline:none;  resize:none;}
+.clearfix:after {clear:both;content:".";display:block;font-size:0;height:0;overflow:hidden;visibility:hidden;}
+.clearfix {*zoom:1;}
+.lt,.left {float:left;}
+.rt,.right {float:right;}
+.layui-layer-loading .layui-layer-loading2{
+	width: 70px !important;
+	height: 70px !important;
+	background-size: 100% !important;
+}
+a{
+	font-family: "微软雅黑";
+}
+p{font-size: 12px}
+[ng-cloak]{
+	display: none !important;
+}
+.ngCloak{
+	display: none;
+}
+.layui-layer-page{
+	border-radius: 10000px !important;
+	box-shadow: none !important;
+	background: transparent !important;
+}
+html, body {
+	position: relative;
+	height: 100%;
+}
+body {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+

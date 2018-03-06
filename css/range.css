@@ -1,0 +1,111 @@
+@charset "utf-8";
+.rangeBox{
+	widows: 500px;
+	padding: 20px 25px;
+}
+.margin-top-10{
+	margin-top: 10px;
+}
+.margin-top-20{
+	margin-top: 20px;
+}
+.create-disk-type ul li{
+	float: left;
+	margin-right: 46px;
+	padding: 8px 16px;
+	border-radius: 2px;
+	border: 1px solid #373737;
+	color: #333;
+	cursor: pointer;
+}
+.type_active{
+	background: #1a77ff;
+	color: #fff!important;
+	border: 1px solid #1a77ff!important;
+}
+/* ÈÝÁ¿ */
+.common_range .range_box{
+    position: relative;
+    width: 394px;
+}
+.common_range .range_bg{
+	height: 42px;
+    background-image: url(../images/range_bg.png);
+}
+.common_range .rangeslider {
+    background-image: none;
+}
+.common_range .rangeslider--horizontal {
+    height: 4px;
+    width: 100%;
+}
+.common_range .range_position{
+	position: absolute;
+	top: 19px;
+	left: 20px;
+	width: 354px;
+}
+.common_range .rangeslider__handle{
+	width: 9px;
+    height: 9px;
+    background: #ff903d;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+}
+.common_range .rangeslider--horizontal .rangeslider__handle {
+    top: -3px;
+}
+.common_range .btn_range{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+.common_range .scale{
+	font-size: 12px;
+}
+.common_range .scale .scale_min{
+	margin-left: 20px;
+}
+.common_range .scale .scale_max{
+	float: right;
+}
+.common_range .computed_box{
+	font-size: 0;
+	text-align: center;
+}
+.common_range .number{
+	width: 66px;
+	height: 18px;
+	margin: 0 9px;
+	border-radius: 2px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid #afbec3;
+}
+.common_range .minus{
+	background-image: url(../images/minus.png);
+}
+.common_range .minus.on{
+	background-image: url(../images/minus_on.png);
+}
+.common_range .plus{
+	background-image: url(../images/plus.png);
+}
+.common_range .plus.on{
+	background-image: url(../images/plus_on.png);
+}
+.common_range .unit{
+	font-size: 12px;
+	color: #333333;
+    vertical-align: top;
+}
+input[type="range"]:focus + .rangeslider .rangeslider__handle {
+  -moz-box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
+  -webkit-box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
+  box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
+}
