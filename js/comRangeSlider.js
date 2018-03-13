@@ -8,7 +8,7 @@ myRange.controller('comRangeSlider', ['$scope','$rootScope','$http',function($sc
         var $number = $element.parents('.js-rangeslider').find('.number');
         var $plus = $element.parents('.js-rangeslider').find('.plus');
         var $minus = $element.parents('.js-rangeslider').find('.minus');
-
+        
         var minSize = initObj.minSize;
         var maxSize = initObj.maxSize;
         var step = initObj.step | null;
@@ -27,7 +27,7 @@ myRange.controller('comRangeSlider', ['$scope','$rootScope','$http',function($sc
             var $inputRange = $(selector, e.target.parentNode.parentNode);
             var value = $number.val();
             if(step){
-                value = parseInt(Math.round(Math.round(value)/10)*10);
+                value = parseInt(Math.round(Math.round(value)/step)*step);
             }
 
             if(parseInt(value) <= parseInt(minSize) || value == ''){
@@ -47,7 +47,7 @@ myRange.controller('comRangeSlider', ['$scope','$rootScope','$http',function($sc
         	var value = $number.val();
         	if(parseInt(value) < parseInt(maxSize)){
                 if(step){
-                    value = parseInt(value) + 10;
+                    value = parseInt(value) + step;
                 }else{
     		        value++;
                 }
@@ -65,7 +65,7 @@ myRange.controller('comRangeSlider', ['$scope','$rootScope','$http',function($sc
         	var value = $number.val();
         	if(parseInt(value) > parseInt(minSize)){
         		if(step){
-                    value = parseInt(value) - 10;
+                    value = parseInt(value) - step;
                 }else{
                   value--;
                 }
@@ -126,7 +126,7 @@ myRange.controller('comRangeSlider', ['$scope','$rootScope','$http',function($sc
             },
             onSlideEnd: function(position, value) {
                 if(step){
-                    value = parseInt(Math.round(Math.round(value)/10)*10);
+                    value = parseInt(Math.round(Math.round(value)/step)*step);
                     $('input[type="range"]').val(value).change();
                 }
             }
